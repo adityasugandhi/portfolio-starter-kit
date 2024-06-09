@@ -1,11 +1,12 @@
-import { BlogPosts } from 'app/components/posts'
+import { BlogPosts } from '@/posts'
 // import { mistral} from '../node_modules/@ai-sdk';
-import ChatInput from './components/Chatbox'
-import Typewriter from "./components/typewriter";
-import Skills from './components/skills'
+import ChatInput from '@/Chatbox'
+import Typewriter from "@/typewriter";
+import Skills from '@/skills'
+import { TracingBeam } from '@/ui/tracingbeam';
 import { generateText } from 'ai';
 import { readStreamableValue } from 'ai/rsc';
-import { Message, continueConversation } from './components/actions';
+// import { Message, continueConversation } from '@/actions';
 
 // const { text } = await generateText({
 //   model: mistral('mistral-large-latest'),
@@ -16,6 +17,7 @@ const headlines = ['Software Engineer', 'Researcher', 'Data Scientist', 'Full St
 export default function Page() {
   return (
     <section>
+       <TracingBeam className="px-6">
       <div className='flex justify-between'>
         <h1 className="mb-8 text-2xl font-semibold tracking-tighter mr-auto">
           Aditya Sugandhi
@@ -43,7 +45,7 @@ export default function Page() {
       <ChatInput/>
 
 
-
+    </TracingBeam>
     </section>
   )
 }

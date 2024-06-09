@@ -16,8 +16,10 @@
     "baseUrl": ".",
     "incremental": true,
     "paths":{
-      "@library":["./node_modules/*"]
+      "@library":["./node_modules/*"],
+      "@/*": ["./app/components/*"]
     },
+  
 
     "plugins": [
       {
