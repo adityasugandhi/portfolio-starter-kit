@@ -4,8 +4,11 @@ import ChatInput from '@/Chatbox'
 import Typewriter from "@/typewriter";
 import Skills from '@/skills'
 import { TracingBeam } from '@/ui/tracingbeam';
+import { Meteors } from '@/ui/meteors';
 import { generateText } from 'ai';
 import { readStreamableValue } from 'ai/rsc';
+import { BackgroundBeams } from '@/ui/background-beam';
+import ExperienceList from '@/Experience';
 // import { Message, continueConversation } from '@/actions';
 
 // const { text } = await generateText({
@@ -34,8 +37,10 @@ export default function Page() {
         mode, which eases long coding sessions by reducing eye strain.`}
       </p>
       <div className="my-8">
-        <BlogPosts />
+      <ExperienceList/>
+        
         <Skills />
+        <BlogPosts />
       </div>
 
 
@@ -44,8 +49,9 @@ export default function Page() {
 
       <ChatInput/>
 
-
+  
     </TracingBeam>
+    <BackgroundBeams/>
     </section>
   )
 }
