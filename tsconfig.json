@@ -18,7 +18,8 @@
     "paths":{
       "@library":["./node_modules/*"],
       "@/*": ["./app/components/*"],
-      "@data/*":["./data/*"]
+      "@data/*":["./data/*"],
+      "@icons/*":["./Icons/*"]
     },
   
 

@@ -9,6 +9,7 @@ import { generateText } from 'ai';
 import { readStreamableValue } from 'ai/rsc';
 import { BackgroundBeams } from '@/ui/background-beam';
 import ExperienceList from '@/Experience';
+import RepositoryTable from '@/GithubTable'
 // import { Message, continueConversation } from '@/actions';
 
 // const { text } = await generateText({
@@ -19,39 +20,34 @@ import ExperienceList from '@/Experience';
 const headlines = ['Software Engineer', 'Researcher', 'Data Scientist', 'Full Stack Developer']
 export default function Page() {
   return (
-    <section>
-       <TracingBeam className="px-6">
-      <div className='flex justify-between'>
-        <h1 className="mb-8 text-2xl font-semibold tracking-tighter mr-auto">
-          Aditya Sugandhi
-        </h1>
-        <h1 className="ml-auto">
-          <Typewriter texts={headlines} delay={250}/>
-        </h1>
-      </div>
-      <p className="mb-4">
-        {`I'm a  and tab advocate, finding unmatched efficiency in
-        Vim's keystroke commands and tabs' flexibility for personal viewing
-        preferences. This extends to my support for static typing, where its
-        early error detection ensures cleaner code, and my preference for dark
-        mode, which eases long coding sessions by reducing eye strain.`}
-      </p>
-      <div className="my-8">
-      <ExperienceList/>
-        
-        <Skills />
-        <BlogPosts />
-      </div>
-
-
-
-      
-
-      <ChatInput/>
-
-  
-    </TracingBeam>
-    <BackgroundBeams/>
-    </section>
+    <div className="w-full flex justify-center">
+      <section className="w-full max-w-screen-xl px-10">
+        <TracingBeam>
+          <div className='flex justify-between w-full'>
+            <h1 className="mb-8 text-2xl font-semibold tracking-tighter mr-auto">
+              Aditya Sugandhi
+            </h1>
+            <h1 className="ml-auto">
+              {/* <Typewriter texts={headlines} delay={250}/> */}
+            </h1>
+          </div>
+          <p className="mb-4">
+            {`I'm a  and tab advocate, finding unmatched efficiency in
+            Vim's keystroke commands and tabs' flexibility for personal viewing
+            preferences. This extends to my support for static typing, where its
+            early error detection ensures cleaner code, and my preference for dark
+            mode, which eases long coding sessions by reducing eye strain.`}
+          </p>
+          <div className="my-8">
+            <ExperienceList />
+            <Skills />
+            <BlogPosts />
+            <RepositoryTable />
+          </div>
+          <ChatInput />
+        </TracingBeam>
+      </section>
+      <BackgroundBeams />
+    </div>
   )
 }

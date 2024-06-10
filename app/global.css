@@ -36,10 +36,10 @@ html {
 .prose .anchor {
   @apply absolute invisible no-underline;
 
-  margin-left: -1em;
+  /* margin-left: -1em; */
   padding-right: 0.5em;
-  width: 80%;
-  max-width: 700px;
+  width: 100%;
+  max-width: 1024px;
   cursor: pointer;
 }
 
@@ -140,7 +140,7 @@ input[type='email'] {
 
 table {
   display: block;
-  max-width: fit-content;
+  max-width: max-content;
   overflow-x: auto;
   white-space: nowrap;
 }
@@ -148,3 +148,16 @@ table {
 .title {
   text-wrap: balance;
 }
+
+html, body {
+  width: max-content;
+  margin-left:100px;
+  margin-right:10px;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+* {
+  box-sizing: inherit;
+}
+
