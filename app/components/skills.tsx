@@ -17,7 +17,7 @@ const Skills: React.FC = () => {
       for (const category in skills) {
         for (const skill of skills[category]) {
           try {
-            const icon = await import(`Icons/${skill}.png`);
+            const icon = await import(`Icons/${skill.toLowercase()}.png`);
             icons[skill] = icon.default;
           } catch (error) {
             icons[skill] = ''; // No icon found
