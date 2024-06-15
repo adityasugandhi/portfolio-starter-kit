@@ -38,7 +38,7 @@ export default function Page() {
               {/* <Typewriter texts={headlines} delay={250}/> */}
             </h1>
           </div>
-          <div className='flex md:flex-row sm:items-center sm:flex-col'>
+          <div className='flex md:flex-row lg:flex-row xl:flex-row sm:items-center flex-col'>
           <p className="flex-1 justify-content">
             {`Hey there, Aditya Sugandhi a Software Engineer with 4+ years of experince in building Scalable web applicaitons`}
           </p>

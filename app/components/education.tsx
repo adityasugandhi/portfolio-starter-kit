@@ -11,9 +11,9 @@ interface EducationItemProps {
 const EducationItem: React.FC<EducationItemProps> = ({ degree, institution, location, duration }) => {
   return (
     <div className="education-item mb-6">
-      <div className="education-details transition duration-300 ease-in-out hover:bg-gray-900 p-3 rounded-lg">
+      <div className="education-details p-3 rounded-lg">
         <h3 className="text-xl font-medium mb-2">{degree}</h3>
-        <p className="institution text-gray-400 font-semibold">{institution}</p>
+        <p className="institution  transition duration-300 ease-in-out hover:text-black text-gray-400 font-semibold">{institution}</p>
         <p className="location text-gray-500 text-sm">{location}</p>
         <p className="duration text-gray-500 text-sm">{duration}</p>
       </div>
@@ -38,7 +38,7 @@ const Education: React.FC = () => {
   ];
 
   return (
-    <div className="education my-10 text-white">
+    <div className="education my-10 dark:text-white text-black">
       <h2 className="flex text-2xl font-semibold border-b-2 border-white-700 pb-2 mb-6">
 
       <span className="text-2xl font-bold">Education</span>

@@ -82,11 +82,11 @@ const RepositoryTable = () => {
       <Image src={projectpng} width={35} height={35} alt="Projects icon" className="ml-2" />
       </h1>
       <div className="overflow-x-auto">
-        <table className="min-w-full bg-black border border-gray-700 table-fixed">
+        <table className="min-w-full dark:bg-black bg-white border border-gray-700 table-fixed">
           <thead>
             <tr>
               {columns.map((column) => (
-                <th key={column.id} className="px-4 py-2 text-white" style={{ width: column.width }}>
+                <th key={column.id} className="px-4 py-2 text-black dark:text-white" style={{ width: column.width }}>
                   {column.label}
                 </th>
               ))}
@@ -96,12 +96,12 @@ const RepositoryTable = () => {
             {currentRepos.map((repo) => (
               <tr
                 key={repo.id}
-                className="border-t border-gray-700 hover:bg-gray-900 cursor-pointer"
+                className="border-t border-gray-700 dark:hover:bg-gray-100 hover:bg-gray-500 cursor-pointer"
                 onClick={() => window.open(repo.html_url, '_blank')}
               >
-                <td className="px-4 py-2 text-white">{repo.name}</td>
-                <td className="px-4 py-2 text-white">{format(parseISO(repo.updated_at), 'yyyy-MM-dd')}</td>
-                <td className="px-4 py-2 text-white text-center">
+                <td className="px-4 py-2  text-black dark:text-white">{repo.name}</td>
+                <td className="px-4 py-2 text-black dark:text-white">{format(parseISO(repo.updated_at), 'yyyy-MM-dd')}</td>
+                <td className="px-4 py-2 dark:text-white text-center">
                   <a href={repo.html_url} target="_blank" rel="noopener noreferrer" className="text-blue-400">
                     <FaLink />
                   </a>
