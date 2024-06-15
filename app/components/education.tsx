@@ -12,7 +12,7 @@ const EducationItem: React.FC<EducationItemProps> = ({ degree, institution, loca
   return (
     <div className="education-item mb-6">
       <div className="education-details p-3 rounded-lg">
-        <h3 className="text-xl font-medium mb-2">{degree}</h3>
+        <h3 className="text-xl  font-medium mb-2">{degree}</h3>
         <p className="institution  transition duration-300 ease-in-out hover:text-black text-gray-400 font-semibold">{institution}</p>
         <p className="location text-gray-500 text-sm">{location}</p>
         <p className="duration text-gray-500 text-sm">{duration}</p>
@@ -39,7 +39,7 @@ const Education: React.FC = () => {
 
   return (
     <div className="education my-10 dark:text-white text-black">
-      <h2 className="flex text-2xl font-semibold border-b-2 border-white-700 pb-2 mb-6">
+      <h2 className="flex text-2xl sm:text-xl font-semibold border-b-2 border-white-700 pb-2 mb-6">
 
       <span className="text-2xl font-bold">Education</span>
       <Image src={educationpng} width={35} height={35} alt="Experience icon" className="ml-2" />

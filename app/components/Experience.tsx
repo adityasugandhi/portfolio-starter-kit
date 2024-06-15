@@ -66,7 +66,7 @@ const ExperienceList: React.FC = () => {
     <div className="p-2">
 <h2 className="flex items-center mb-4">
 
-  <span className="text-2xl font-bold">Experience</span>
+  <span className="text-2xl sm:text-xl font-bold">Experience</span>
   <Image src={Experience} width={35} height={35} alt="Experience icon" className="ml-" />
 </h2>
 

@@ -31,7 +31,7 @@ export default function Page() {
       <TracingBeam>
           <div className='flex justify-between w-full'>
             <h1 className="flex mb-8 sm:mb-4 text-2xl font-semibold tracking-tighter mr-auto">
-            <span className="text-3xl font-bold">Aditya Sugandhi</span>
+            <span className="text-3xl sm:text-2xl font-bold">Aditya Sugandhi</span>
             <Image src={profile} width={40} height={20} alt="profile icon" className="ml-4" />
             </h1>
             <h1 className="ml-auto">

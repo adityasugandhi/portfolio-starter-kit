@@ -45,7 +45,7 @@ const Skills: React.FC = () => {
   return (
     <div className="container mx-auto">
       <h1 className="flex text-2xl font-bold mb-4">
-      <span className="text-2xl font-bold">Skills</span>
+      <span className="text-2xl sm:text-xl font-bold">Skills</span>
       <Image src={skillsPng} width={35} height={35} alt="skills icon" className="ml-2" />
 
       </h1>
