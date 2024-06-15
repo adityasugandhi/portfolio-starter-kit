@@ -77,7 +77,7 @@ const RepositoryTable = () => {
 
   return (
     <div className="container mx-auto px-4 py-8">
-      <h1 className="flex text-2xl font-bold mb-4 text-white">
+      <h1 className="flex text-2xl font-bold mb-4 text-black dark:text-white">
       <span className="text-2xl font-bold">Projects</span>
       <Image src={projectpng} width={35} height={35} alt="Projects icon" className="ml-2" />
       </h1>
