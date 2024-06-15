@@ -1,5 +1,6 @@
 import React from 'react';
-import { FaCheckCircle, FaStar, IconType } from 'react-icons/fa';
+import { FaCheckCircle, FaStar} from 'react-icons/fa';
+import { IconType } from 'react-icons';
 import info from '@data/Info.json';
 import Experience from "@icons/Experience.png"
 import Image from 'next/image';
@@ -66,7 +67,7 @@ const ExperienceList: React.FC = () => {
 <h2 className="flex items-center mb-4">
 
   <span className="text-2xl font-bold">Experience</span>
-  <Image src={Experience} width={35} height={35} alt="Experience icon" className="ml-2" />
+  <Image src={Experience} width={35} height={35} alt="Experience icon" className="ml-" />
 </h2>
 
       {experiences.map((exp, index) => (
