@@ -2,7 +2,9 @@
 import React, { useEffect, useState } from 'react';
 import { FaLink } from 'react-icons/fa'; // Import the link icon from react-icons
 import { format, parseISO } from 'date-fns'; // Import date-fns for date formatting
-
+import GitHubCalendar from '@/GithubHeatMap'
+import Image from 'next/image'
+import projectpng from '@icons/projects.png'
 interface Repository {
   id: number;
   name: string;
@@ -75,7 +77,10 @@ const RepositoryTable = () => {
 
   return (
     <div className="container mx-auto px-4 py-8">
-      <h1 className="text-2xl font-bold mb-4 text-white">Projects</h1>
+      <h1 className="flex text-2xl font-bold mb-4 text-white">
+      <span className="text-2xl font-bold">Projects</span>
+      <Image src={projectpng} width={35} height={35} alt="Projects icon" className="ml-2" />
+      </h1>
       <div className="overflow-x-auto">
         <table className="min-w-full bg-black border border-gray-700 table-fixed">
           <thead>
@@ -91,7 +96,7 @@ const RepositoryTable = () => {
             {currentRepos.map((repo) => (
               <tr
                 key={repo.id}
-                className="border-t border-gray-700 hover:bg-gray-800 cursor-pointer"
+                className="border-t border-gray-700 hover:bg-gray-900 cursor-pointer"
                 onClick={() => window.open(repo.html_url, '_blank')}
               >
                 <td className="px-4 py-2 text-white">{repo.name}</td>
@@ -130,9 +135,10 @@ const RepositoryTable = () => {
           disabled={currentPage === totalPages}
           className="px-3 py-1 mx-1 rounded-full bg-gray-700 text-white disabled:opacity-50"
         >
-          &gt;
+          {/* &gt; */}
         </button>
       </div>
+      {/* <GitHubCalendar username="adityasugandhi" /> */}
     </div>
   );
 };

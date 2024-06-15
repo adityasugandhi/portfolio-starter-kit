@@ -1,7 +1,8 @@
 import React from 'react';
 import { FaCheckCircle, FaStar, IconType } from 'react-icons/fa';
 import info from '@data/Info.json';
-
+import Experience from "@icons/Experience.png"
+import Image from 'next/image';
 interface Experience {
   company: string;
   position: string;
@@ -61,8 +62,13 @@ const ExperienceList: React.FC = () => {
   }));
 
   return (
-    <div className="p-6">
-      <h2 className="text-2xl font-bold mb-4">Experience</h2>
+    <div className="p-2">
+<h2 className="flex items-center mb-4">
+
+  <span className="text-2xl font-bold">Experience</span>
+  <Image src={Experience} width={35} height={35} alt="Experience icon" className="ml-2" />
+</h2>
+
       {experiences.map((exp, index) => (
         <ExperienceItem key={index} {...exp} />
       ))}

@@ -7,6 +7,8 @@
   },
   "dependencies": {
     "@ai-sdk/openai": "^0.0.18",
+    "@react-three/drei": "^9.106.2",
+    "@react-three/fiber": "^8.16.8",
     "@tailwindcss/postcss": "4.0.0-alpha.13",
     "@types/node": "20.11.17",
     "@types/react": "18.2.55",
@@ -14,11 +16,13 @@
     "@vercel/analytics": "^1.3.1",
     "@vercel/speed-insights": "^1.0.11",
     "ai": "^3.1.30",
+    "cal-heatmap": "^4.2.4",
     "clsx": "^2.1.1",
     "date-fns": "^3.6.0",
     "dotenv": "^16.4.5",
     "framer-motion": "^11.2.10",
     "geist": "1.2.2",
+    "github-calendar": "^2.3.4",
     "next": "^14.0.0",
     "next-mdx-remote": "^4.4.1",
     "react": "18.2.0",
@@ -27,6 +31,8 @@
     "styled-components": "^6.1.11",
     "sugar-high": "^0.6.1",
     "tailwind-merge": "^2.3.0",
+    "three": "^0.165.0",
+    "three-globe": "^2.31.0",
     "typescript": "5.3.3"
   },
   "devDependencies": {

@@ -10,6 +10,10 @@ import { readStreamableValue } from 'ai/rsc';
 import { BackgroundBeams } from '@/ui/background-beam';
 import ExperienceList from '@/Experience';
 import RepositoryTable from '@/GithubTable'
+import {GlobeDemo} from '@/Globe'
+import Education from '@/education'
+import Image from 'next/image'
+import profile from '@icons/profile.png'
 // import { Message, continueConversation } from '@/actions';
 
 // const { text } = await generateText({
@@ -20,34 +24,40 @@ import RepositoryTable from '@/GithubTable'
 const headlines = ['Software Engineer', 'Researcher', 'Data Scientist', 'Full Stack Developer']
 export default function Page() {
   return (
-    <div className="w-full flex justify-center">
-      <section className="w-full max-w-screen-xl px-10">
-        <TracingBeam>
+    <div className="w-full flex  sm:px-20 justify-center">
+     
+      <section className="w-full max-w-screen-xl ">
+        
+      <TracingBeam>
           <div className='flex justify-between w-full'>
-            <h1 className="mb-8 text-2xl font-semibold tracking-tighter mr-auto">
-              Aditya Sugandhi
+            <h1 className="flex mb-8 sm:mb-4 text-2xl font-semibold tracking-tighter mr-auto">
+            <span className="text-3xl font-bold">Aditya Sugandhi</span>
+            <Image src={profile} width={40} height={20} alt="profile icon" className="ml-4" />
             </h1>
             <h1 className="ml-auto">
               {/* <Typewriter texts={headlines} delay={250}/> */}
             </h1>
           </div>
-          <p className="mb-4">
-            {`I'm a  and tab advocate, finding unmatched efficiency in
-            Vim's keystroke commands and tabs' flexibility for personal viewing
-            preferences. This extends to my support for static typing, where its
-            early error detection ensures cleaner code, and my preference for dark
-            mode, which eases long coding sessions by reducing eye strain.`}
+          <div className='flex md:flex-row sm:items-center sm:flex-col'>
+          <p className="flex-1 justify-content">
+            {`Hey there, Aditya Sugandhi a Software Engineer with 4+ years of experince in building Scalable web applicaitons`}
           </p>
-          <div className="my-8">
-            <ExperienceList />
-            <Skills />
-            <BlogPosts />
-            <RepositoryTable />
+          <GlobeDemo/>
           </div>
-          <ChatInput />
-        </TracingBeam>
+          <div className="my-8 sm:my-4">
+            <ExperienceList />
+
+            <Skills />
+            <Education/>
+            {/* <BlogPosts /> */}
+            
+          </div>
+          <RepositoryTable />
+          {/* <ChatInput /> */}
+          </TracingBeam>
       </section>
       <BackgroundBeams />
+     
     </div>
   )
 }

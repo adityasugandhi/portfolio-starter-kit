@@ -30,6 +30,6 @@
     ],
     "strictNullChecks": true
   },
-  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts", "app/components/Chatbox.js"],
+  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts", "app/components/Chatbox.js", "app/components/GithubHeatMap.js"],
   "exclude": ["node_modules"]
 }

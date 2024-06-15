@@ -1,6 +1,7 @@
 'use client'
 import React, { useState, useEffect } from 'react';
-
+import Image from 'next/image'
+import skillsPng from '@icons/Skills.png'
 const skills = {
   Programming: ['JavaScript', 'TypeScript', 'Python', 'C++', 'Java', 'Rust'],
   Cloud: ['AWS', 'Azure', 'Google Cloud'],
@@ -43,7 +44,11 @@ const Skills: React.FC = () => {
 
   return (
     <div className="container mx-auto">
-      <h1 className="text-2xl font-bold mb-4">Skills</h1>
+      <h1 className="flex text-2xl font-bold mb-4">
+      <span className="text-2xl font-bold">Skills</span>
+      <Image src={skillsPng} width={35} height={35} alt="skills icon" className="ml-2" />
+
+      </h1>
       <div className="container mx-auto px-4 grid grid-cols-2 gap-8">
         {Object.entries(skills).map(([category, skillsList]) => (
           <div key={category}>
