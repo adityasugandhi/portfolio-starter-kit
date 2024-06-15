@@ -27,7 +27,7 @@ export default function Page() {
     <div className="w-full flex  sm:px-20 justify-center">
      
       <section className="w-full max-w-screen-xl ">
-        
+       <div className='flex'>
       <TracingBeam>
           <div className='flex justify-between w-full'>
             <h1 className="flex mb-8 sm:mb-4 text-2xl font-semibold tracking-tighter mr-auto">
@@ -38,7 +38,7 @@ export default function Page() {
               {/* <Typewriter texts={headlines} delay={250}/> */}
             </h1>
           </div>
-          <div className='flex md:flex-row lg:flex-row xl:flex-row sm:items-center flex-col'>
+          <div className='flex md:flex-row lg:flex-row xl:flex-row items-center  flex-col'>
           <p className="flex-1 justify-content">
             {`Hey there, Aditya Sugandhi a Software Engineer with 4+ years of experince in building Scalable web applicaitons`}
           </p>
@@ -55,6 +55,7 @@ export default function Page() {
           <RepositoryTable />
           {/* <ChatInput /> */}
           </TracingBeam>
+        </div>   
       </section>
       <BackgroundBeams />
      

@@ -51,11 +51,11 @@ export const TracingBeam = ({
       ref={ref}
       className={cn("relative w-full max-w-4xl mx-auto h-full", className)}
     >
-      <div className="absolute -left-20 sm:-left-20 md:-left-20 top-3">
+      <div className="absolute  -left-20 sm:-left-20 md:-left-20 top-3">
         <motion.div
           transition={{
             duration: 0.2,
-            delay: 0.5,
+            delay: 0.2,
           }}
           animate={{
             boxShadow:
@@ -68,7 +68,7 @@ export const TracingBeam = ({
           <motion.div
             transition={{
               duration: 0.2,
-              delay: 0.5,
+              delay: 0.2,
             }}
             animate={{
               backgroundColor:
