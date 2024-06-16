@@ -149,3 +149,7 @@ table {
   text-wrap: balance;
 }
 
+:root {
+  --emerald-500: #10B981;
+  --emerald-600: #059669;
+}

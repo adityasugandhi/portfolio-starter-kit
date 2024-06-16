@@ -96,7 +96,7 @@ const RepositoryTable = () => {
             {currentRepos.map((repo) => (
               <tr
                 key={repo.id}
-                className="border-t border-gray-700 dark:hover:bg-gray-100 hover:bg-gray-500 cursor-pointer"
+                className="border-t border-gray-700 dark:hover:bg-gray-800 hover:bg-gray-500 cursor-pointer"
                 onClick={() => window.open(repo.html_url, '_blank')}
               >
                 <td className="px-4 py-2  text-black dark:text-white">{repo.name}</td>

@@ -13,7 +13,7 @@ const EducationItem: React.FC<EducationItemProps> = ({ degree, institution, loca
     <div className="education-item mb-6">
       <div className="education-details p-3 rounded-lg">
         <h3 className="text-xl  font-medium mb-2">{degree}</h3>
-        <p className="institution  transition duration-300 ease-in-out hover:text-black text-gray-400 font-semibold">{institution}</p>
+        <p className="institution  transition duration-300 ease-in-out hover:text-black dark:hover:text-white text-gray-400 font-semibold">{institution}</p>
         <p className="location text-gray-500 text-sm">{location}</p>
         <p className="duration text-gray-500 text-sm">{duration}</p>
       </div>
